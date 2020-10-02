@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfStyleLesson1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfStyleLesson1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+        <!--<Style TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>-->
+    </Window.Resources>
+
+    <StackPanel>
+
+        <!--<StackPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+            </Style>
+        </StackPanel.Resources>-->
+        
+        <Button Content="Btn1" Style="{StaticResource firstStyle}">
+            <!--<Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Red"/>
+                    <Setter Property="Content" Value="Btn1"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+            </Button.Style>-->
+        </Button>
+        <Button Content="Btn2" Style="{StaticResource secondStyle}" Click="Button_Click_1">
+            <!--<Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Green"/>
+                    <Setter Property="Content" Value="Btn1"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+            </Button.Style>-->
+        </Button>
+        <Button Content="Btn3" Style="{DynamicResource thirdStyle}" Click="Button_Click">
+            <!--<Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Blue"/>
+                    <Setter Property="Content" Value="Btn1"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+            </Button.Style>-->
+        </Button>
+
+        <Button FontSize="24" Content="AAA" Background="{StaticResource lightPinkColor}" Click="Button_Click_2"/>
+    </StackPanel>
+</Window>
